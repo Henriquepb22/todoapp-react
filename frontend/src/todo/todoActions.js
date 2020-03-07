@@ -13,6 +13,7 @@ export const search = () => {
         const search = description
             ? `&description__regex=/${description}/`
             : "";
+        console.log(URL + "?sort=-createAt" + search);
         const request = axios
             .get(`${URL}?sort=-createdAt${search}`)
             .then(resp =>

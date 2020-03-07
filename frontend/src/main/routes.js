@@ -4,10 +4,12 @@ import { Route, HashRouter, Redirect } from "react-router-dom";
 import Todo from "../todo/todo";
 import About from "../about/about";
 
-export default props => (
+const Routes = () => (
     <HashRouter>
-        <Route path="/todos" component={Todo} />
+        <Route exact path="/" component={Todo} />
         <Route path="/about" component={About} />
-        <Route path="*" component={Todo} />
+        <Redirect from="*" to="/" />
     </HashRouter>
 );
+
+export default Routes;

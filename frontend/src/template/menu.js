@@ -1,20 +1,33 @@
-import React from 'react'
+import React from "react";
 
-export default props => (
-  <nav className="navbar navbar-inverse bg-inverse">
-    <div className="container">
-      <div className="navbar-header">
+const Menu = () => (
+    <nav className="navbar navbar-dark bg-dark">
         <a className="navbar-brand" href="#">
-          <i className="fa fa-calendar-check-o"></i> To-do App
+            <i className="fa fa-calendar-check-o"></i> To-do App
         </a>
-      </div>
+        <button
+            className="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbnavbarContentar"
+            aria-controls="navbarContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+        >
+            <span className="navbar-toggler-icon"></span>
+        </button>
 
-      <div id="navbar" className="navbar-collapse collapse">
-        <ul className="nav navbar-nav">
-          <li><a href="#/todos"> Tarefas </a></li>
-          <li><a href="#/about"> About </a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-)
+        <div className="collapse navbar-collapse" id="navbarContent">
+            <ul className="navbar-nav">
+                <li className="nav-item">
+                    <a href="#/todos"> Tarefas </a>
+                </li>
+                <li className="nav-item">
+                    <a href="#/about"> About </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+);
+
+export default Menu;
