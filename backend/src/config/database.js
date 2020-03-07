@@ -1,5 +1,7 @@
 const mongoose = require("mongoose");
-mongoose.Promise = global.Promise;
-module.exports = mongoose.connect("mongodb://192.168.99.100:27017/todo", {
-  useMongoClient: true
+
+module.exports = mongoose.connect("mongodb://localhost:27017/todo", {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useFindAndModify: false
 });

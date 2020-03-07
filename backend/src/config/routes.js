@@ -1,12 +1,12 @@
-const express = require('express');
+const { Router } = require("express");
 
-module.exports = function (server) {
+const TodoController = require("../api/controller/todoController");
 
-    //Rotas da API
-    const router = express.Router();
-    server.use('/api', router);
+const routes = Router();
 
-    //Rotas do TODO
-    const todoService = require('../api/todo/todoService');
-    todoService.register(router, '/todos');
-}
+routes.get("/todo", TodoController.show);
+routes.post("/todo", TodoController.create);
+routes.put("/todo/:id", TodoController.update);
+routes.delete("/todo/:id", TodoController.destroy);
+
+module.exports = routes;

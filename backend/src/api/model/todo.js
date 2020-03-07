@@ -1,5 +1,4 @@
-const restful = require('node-restful');
-const mongoose = restful.mongoose;
+const mongoose = require("mongoose");
 
 const todoSchema = new mongoose.Schema({
     description: {
@@ -17,4 +16,4 @@ const todoSchema = new mongoose.Schema({
     }
 });
 
-module.exports = restful.model('Todo', todoSchema);
+module.exports = mongoose.model("Todo", todoSchema);
