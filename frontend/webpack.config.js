@@ -3,7 +3,7 @@ const path = require("path");
 module.exports = {
     entry: "./src/index.js",
     output: {
-        path: path.resolve(__dirname + "dist"),
+        path: path.resolve(__dirname + "/dist"),
         filename: "bundle.js"
     },
     devServer: {
@@ -13,7 +13,7 @@ module.exports = {
     resolve: {
         extensions: [".js", ".jsx"],
         alias: {
-            modules: __dirname + "/node_modules"
+            modules: path.resolve(__dirname + "/node_modules")
         }
     },
     module: {

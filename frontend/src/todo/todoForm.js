@@ -1,9 +1,10 @@
 import React, { useEffect } from "react";
+import { connect } from "react-redux";
+import { bindActionCreators } from "redux";
+
 import Grid from "../template/grid";
 import IconButton from "../template/iconButton";
 import { changeDescription, search, add, clear } from "./todoActions";
-import { connect } from "react-redux";
-import { bindActionCreators } from "redux";
 
 const TodoForm = props => {
     function keyHandler(e) {

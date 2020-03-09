@@ -1,7 +1,7 @@
 import React from "react";
 
 const PageHeader = props => (
-    <header className="page-header">
+    <header className="page-header mt-3">
         <h2>
             {props.name} <small>{props.small}</small>
         </h2>

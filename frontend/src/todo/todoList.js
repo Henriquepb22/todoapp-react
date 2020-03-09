@@ -1,7 +1,8 @@
 import React from "react";
 import { connect } from "react-redux";
-import IconButton from "../template/iconButton";
 import { bindActionCreators } from "redux";
+
+import IconButton from "../template/iconButton";
 import { markAsDone, markAsPending, deleteTodo } from "./todoActions";
 
 const TodoList = props => {

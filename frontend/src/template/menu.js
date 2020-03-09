@@ -1,7 +1,8 @@
 import React from "react";
+import "bootstrap/js/dist/collapse";
 
 const Menu = () => (
-    <nav className="navbar navbar-dark bg-dark">
+    <nav className="navbar navbar-expand-md navbar-light bg-light">
         <a className="navbar-brand" href="#">
             <i className="fa fa-calendar-check-o"></i> To-do App
         </a>
@@ -9,7 +10,7 @@ const Menu = () => (
             className="navbar-toggler"
             type="button"
             data-toggle="collapse"
-            data-target="#navbnavbarContentar"
+            data-target="#navbarContent"
             aria-controls="navbarContent"
             aria-expanded="false"
             aria-label="Toggle navigation"
@@ -18,12 +19,18 @@ const Menu = () => (
         </button>
 
         <div className="collapse navbar-collapse" id="navbarContent">
-            <ul className="navbar-nav">
+            <ul className="navbar-nav mr-auto">
                 <li className="nav-item">
-                    <a href="#/todos"> Tarefas </a>
+                    <a className="nav-link" href="#/">
+                        {" "}
+                        Tarefas{" "}
+                    </a>
                 </li>
                 <li className="nav-item">
-                    <a href="#/about"> About </a>
+                    <a className="nav-link" href="#/about">
+                        {" "}
+                        About{" "}
+                    </a>
                 </li>
             </ul>
         </div>
