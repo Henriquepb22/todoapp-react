@@ -7,6 +7,18 @@ module.exports = {
         return res.json(todo);
     },
 
+    async search(req, res) {
+        const { description } = req.query;
+
+        const todo = await Todo.find({
+            description: {
+                $in: description
+            }
+        });
+
+        return res.json(todo);
+    },
+
     async create(req, res) {
         const { description } = req.body;
 
