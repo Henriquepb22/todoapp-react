@@ -1,6 +1,7 @@
 import axios from "axios";
 
 const URL = "http://localhost:3003/todo";
+const SearchURL = "http://localhost:3003/todos";
 
 export const changeDescription = event => ({
     type: "DESCRIPTION_CHANGED",
@@ -10,18 +11,27 @@ export const changeDescription = event => ({
 export const search = () => {
     return (dispatch, getState) => {
         const description = getState().todo.description;
-        const search = description
-            ? `&description__regex=/${description}/`
-            : "";
-        console.log(URL + "?sort=-createAt" + search);
-        const request = axios
-            .get(`${URL}?sort=-createdAt${search}`)
-            .then(resp =>
+        if (!description) {
+            const request = axios.get(`${URL}?sort=-createdAt`).then(resp =>
                 dispatch({
                     type: "TODO_SEARCHED",
                     payload: resp.data
                 })
             );
+        } else {
+            const request = axios
+                .get(SearchURL, {
+                    params: {
+                        description
+                    }
+                })
+                .then(resp =>
+                    dispatch({
+                        type: "TODO_SEARCHED",
+                        payload: resp.data
+                    })
+                );
+        }
     };
 };
 

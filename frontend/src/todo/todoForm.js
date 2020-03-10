@@ -24,7 +24,7 @@ const TodoForm = props => {
     return (
         <div role="form" className="todoForm">
             <div className="row">
-                <Grid cols="12 9 10">
+                <Grid cols="12 8 9 10">
                     <input
                         id="description"
                         className="form-control"
@@ -34,7 +34,7 @@ const TodoForm = props => {
                         value={props.description}
                     ></input>
                 </Grid>
-                <Grid cols="12 3 2">
+                <Grid cols="12 4 3 2">
                     <IconButton
                         style="primary"
                         icon="plus"
