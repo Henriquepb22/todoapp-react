@@ -11,9 +11,7 @@ module.exports = {
         const { description } = req.query;
 
         const todo = await Todo.find({
-            description: {
-                $in: description
-            }
+            description
         });
 
         return res.json(todo);

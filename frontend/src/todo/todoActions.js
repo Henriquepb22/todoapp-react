@@ -22,7 +22,10 @@ export const search = () => {
             const request = axios
                 .get(SearchURL, {
                     params: {
-                        description
+                        description: {
+                            $regex: /^(description)/,
+                            $options: "i"
+                        }
                     }
                 })
                 .then(resp =>
