@@ -9,9 +9,10 @@ module.exports = {
 
     async search(req, res) {
         const { description } = req.query;
+        let regexdescription = new RegExp(description, "ig");
 
         const todo = await Todo.find({
-            description
+            description: regexdescription
         });
 
         return res.json(todo);
