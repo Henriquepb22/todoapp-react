@@ -29,7 +29,7 @@ const Menu = () => (
                 <li className="nav-item">
                     <a className="nav-link" href="#/about">
                         {" "}
-                        About{" "}
+                        Sobre{" "}
                     </a>
                 </li>
             </ul>
