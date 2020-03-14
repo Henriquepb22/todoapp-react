@@ -2,10 +2,10 @@ import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "font-awesome/css/font-awesome.min.css";
 
-import "../template/custom.css";
+import "../utils/styles/custom.css";
 
-import Menu from "../template/menu";
-import Routes from "./routes";
+import Menu from "../components/Menu";
+import Routes from "../utils/routes";
 
 const App = () => (
     <>

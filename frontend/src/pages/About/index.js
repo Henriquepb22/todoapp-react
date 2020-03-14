@@ -1,6 +1,6 @@
 import React from "react";
 
-import PageHeader from "../template/pageHeader";
+import PageHeader from "../../components/PageHeader";
 
 const About = () => (
     <>

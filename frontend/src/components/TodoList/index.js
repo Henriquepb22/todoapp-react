@@ -2,8 +2,12 @@ import React from "react";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 
-import IconButton from "../template/iconButton";
-import { markAsDone, markAsPending, deleteTodo } from "./todoActions";
+import IconButton from "../IconButton";
+import {
+    markAsDone,
+    markAsPending,
+    deleteTodo
+} from "../../utils/actions/todoActions";
 
 const TodoList = props => {
     const renderRows = () => {

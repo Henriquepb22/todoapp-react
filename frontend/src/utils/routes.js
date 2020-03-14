@@ -1,8 +1,8 @@
 import React from "react";
 import { Route, HashRouter, Redirect } from "react-router-dom";
 
-import Todo from "../todo/todo";
-import About from "../about/about";
+import Todo from "../pages/Todo";
+import About from "../pages/About";
 
 const Routes = () => (
     <HashRouter>

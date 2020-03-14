@@ -6,8 +6,8 @@ import multi from "redux-multi";
 import promise from "redux-promise";
 import thunk from "redux-thunk";
 
-import App from "./main/app";
-import reducers from "./main/reducers";
+import App from "./components/app";
+import reducers from "./utils/reducers/rootReducers";
 
 const devTools =
     window.__REDUX_DEVTOOLS_EXTENSION__ &&

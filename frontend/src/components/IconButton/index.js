@@ -1,6 +1,6 @@
 import React from "react";
 
-import If from "./if";
+import If from "../../utils/if";
 
 const IconButton = props => (
     <If test={!props.hide}>
